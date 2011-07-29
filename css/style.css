@@ -1,28 +1,18 @@
 body{
-	background-color: rgba(255, 165, 0, 1);
+	background-color: #ffa500;
 	font-family: brevia, helvetica, verdana, sans-serif;
-	margin: 0;
-	-webkit-transition: all .25s linear;
 }
 
-.clear{
-	clear: both;
-}
-
-#page-width{
+#page{
 	width: 80%;
 	margin: 0 auto;
-	padding: 10px 0;
-	overflow: visible;
 }
 
 .foldup {
 	text-transform: uppercase;
 	font-size: 3em;
 	text-align: center;
-	color: white;
-	overflow: visible;
-	width: 100%;
+	color: #FFF;
 }
 
 .foldup > span {
@@ -33,26 +23,11 @@ body{
 
 .foldup span > span{
 	display: inline-block;
-	/* float: left; */
 	width: 1.5em;
-	text-align: center;
-	min-height: 1px;
-	padding: 10px 0;
+	padding: .2em 0;
 	position: relative;
 }
 
 .foldup span > span:first-child { border-radius: 10px 0 0 10px; }
 .foldup span > span:last-child { border-radius: 0 10px 10px 0; }
 .foldup span > span:only-child { border-radius: 10px; }
-
-.foldup span > span:nth-child(2n){
-	background: orange;
-}
-
-.foldup span > span:nth-child(2n+1){
-	background: orange;
-}
-
-.foldup span > span:empty{
-	background-color: none;
-}

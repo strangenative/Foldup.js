@@ -1,23 +1,29 @@
-//Some important variables for you to set
-containerWidth = .8; 										//What fraction of the browser window is the text's container?
-var startColor = [255, 165, 0];
-var lowlightColor = [172, 111, 0];
-var highlightColor = [255, 194, 83];
-minShadow = .3; 						//Set at 0 if you want no shadow
-maxShadow = .4;
+//::::::::::::::::::::::::::::::::::::::::CUSTOM VARIABLES
 
-//Don't touch anything below this
+containerWidth = .8; 				//What decimal percent of the browser window is the text's container?
+startColor = [255, 165, 0];			//RGB start value for the letter box's color
+lowlightColor = [172, 111, 0];		//RGB goal for the letter boxes in shadow 
+highlightColor = [255, 194, 83];	//RGB goal for the letter boxes in the light
+minShadow = .3; 					//The lightest opacity you want the card's shadow to have
+maxShadow = .4;						//The darkest opacity you want the card's shadow to have
+
+
+//::::::::::::::::::::::::::::::::::::::::NOT CUSTOM VARIABLES
+
 screenWidth = screen.width * .9;
-
 flatWidth = screenWidth*containerWidth;
-var evenDiff = [0, 0, 0];
-var oddDiff = [0, 0, 0];
-var evenColor = [0, 0, 0];
-var oddColor = [0, 0, 0];
+evenDiff = [0, 0, 0];
+oddDiff = [0, 0, 0];
+evenColor = [0, 0, 0];
+oddColor = [0, 0, 0];
 for(var i in startColor){
 	evenDiff[i] = highlightColor[i] - startColor[i];
 	oddDiff[i] = lowlightColor[i] - startColor[i];
 	}
+
+
+//::::::::::::::::::::::::::::::::::::::::EVENTS THAT CALL FOLDUP FUNCTION
+
 $(document).ready(function() {
 	letterBoxWidth = $('.word1 .char1').width();
 	foldup();
@@ -25,6 +31,9 @@ $(document).ready(function() {
 $(window).resize(function(){
 	foldup();
 	});
+
+
+//::::::::::::::::::::::::::::::::::::::::THE FOLDUP FUNCTION
 
 function foldup(){
 	currWidth = $(window).width();		//Determine the squish percentage
