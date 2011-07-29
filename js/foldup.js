@@ -49,12 +49,16 @@ function foldup(){
 	$('.foldup').children().children().css({	//Transform the letter
 		'margin' : '0 ' + -margin + ' ', 
 		'-webkit-transform': 'scaleX( ' + flatPercent + ' ) skewY( ' + skew + 'deg)',
+		'-moz-transform': 'scaleX( ' + flatPercent + ' ) skewY( ' + skew + 'deg)',
+		'-o-transform': 'scaleX( ' + flatPercent + ' ) skew(0deg, ' + skew + 'deg)',
 		'top': '-' + translateY + 'px',
 		'background-color': 'rgba(' + evenColor[0] + ', ' + evenColor[1] + ', ' + evenColor[2] + ', 1)'
 		//, 'box-shadow': 'inset 0 1px 0 rgba(255, 255, 255,' + squishPercent + '), inset 0 -1px 0 rgba(0, 0, 0,' + squishPercent + ')'
 		});
 	$('.foldup').children().children(':odd').css({
 		'-webkit-transform': 'scaleX( ' + flatPercent + ' ) skewY( -' + skew + 'deg)',
+		'-moz-transform': 'scaleX( ' + flatPercent + ' ) skewY( -' + skew + 'deg)',
+		'-o-transform': 'scaleX( ' + flatPercent + ' ) skew(0deg, -' + skew + 'deg)',
 		'background-color': 'rgba(' + oddColor[0] + ', ' + oddColor[1] + ', ' + oddColor[2] + ', 1)'
 		});
 	
