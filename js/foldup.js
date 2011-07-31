@@ -39,6 +39,7 @@ function foldup(){
 	currWidth = $(window).width();		//Determine the squish percentage
 	currContainerWidth = currWidth*containerWidth;
 	flatPercent = currContainerWidth/flatWidth;
+	if (flatPercent > 1){flatPercent = 1;}
 	squishPercent = 1 - flatPercent;
 	if (squishPercent < 0){squishPercent = 0;}
 	
