@@ -1,0 +1,38 @@
+**Foldup.js** lets you create a "fold up" effect for text on your website. As users resize their browsers, the text folds up in a 3D effect.
+
+To see it in action and as an example, check out: http://www.strangenative.com/foldup
+
+## Installation
+
+Add [jQuery][jquery] and [Lettering.js][ljs] to your page. (Foldup will work with jQuery 1.4.2 or later.) Then add Foldup to your page by linking to `jquery.foldup.js`. 
+
+Basically, you need to add these lines to your web page:
+
+~~~
+  <!-- Tries to load jQuery from Google's CDN; if it fails, uses a local copy -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write('<script src="js/jquery.js"><\/script>')</script>
+  
+  <!-- Load Lettering.js -->
+  <script src="js/lettering/jquery.lettering.js"></script>
+  
+  <!-- Finally, loads Foldup -->
+  <script src="js/jquery.foldup.js"></script>
+~~~
+
+## Usage
+
+Apply the foldup effect to an element on your page by calling the `$.foldup()` function:
+
+~~~
+<p class="foldup">The what must always come before the how.</p>
+
+<script type="text/javascript">
+  $(function() {
+    $(".foldup").foldup();
+  });
+</script>
+~~~
+
+[jquery]:http://jquery.com/
+[ljs]:http://letteringjs.com
