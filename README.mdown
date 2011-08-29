@@ -36,3 +36,5 @@ Apply the foldup effect to an element on your page by calling the `$.foldup()` f
 
 [jquery]:http://jquery.com/
 [ljs]:http://letteringjs.com
+
+Foldup.js was created by Russ Maschmeyer and was turned into a true JQuery plugin by David Demaree
