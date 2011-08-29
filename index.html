@@ -4,19 +4,29 @@
 </head>
 <body>
 	<div id="page">
-		
-		<p class="foldup">&ldquo;Way out west there was this fella I wanna tell ya about. Goes by the name of Jeff Lebowski. At least that was the handle his loving parents gave him, but he never had much use for it himself. See, this Lebowski, he called himself&#8230; &lsquo;The Dude&rsquo;.&rdquo;</p>
+		<p class="kubrick foldup">&ldquo;The what must come before the how&rdquo;</p>
+		<p class="stranger foldup">&ldquo;Way out west there was this fella I wanna tell ya about. Goes by the name of Jeff Lebowski. At least that was the handle his loving parents gave him, but he never had much use for it himself. See, this Lebowski, he called himself&#8230; &lsquo;The Dude&rsquo;.&rdquo;</p>
 	
 	</div>
-	<script type="text/javascript" src="http://use.typekit.com/awy4zpy.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<script src="js/jquery.js"></script>
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> -->
+	<!-- <script type="text/javascript" src="http://use.typekit.com/awy4zpy.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/lettering/jquery.lettering.js"></script>
 	<script>
-  		$(document).ready(function() {
-    		$(".foldup").lettering('words').children('span').lettering();
-  		});
+    (function(){
+      	window.foldEverything = function(){
+  	    $('.stranger').foldup();
+  		
+    		$('.kubrick').foldup({
+    		  startColor: [255, 0, 255],
+    		  containerWidth: 0.3
+    		});
+  	  }
+	
+      $(document).ready(window.foldEverything);
+      $(window).resize(window.foldEverything);
+    })();
 	</script>
 	<script src="js/foldup.js"></script>
 </body>
