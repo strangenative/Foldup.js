@@ -23,10 +23,14 @@ $.fn.foldup = function(settings){
   	}
 
   this.each(function(){
-    // TODO: Check to see if lettering has already been applied and fail gracefully if it's been done
-
-    // Apply lettering effect here to make sure it gets done
-    $(this).lettering('words').children('span').lettering();
+    
+    // Check to see if lettering has already been applied and fail gracefully if it's been done
+	if ( $(this).children(":first").hasClass('word1') ) {
+		// Do nothing
+	} else {
+		// Apply lettering effect here to make sure it gets done
+    	$(this).lettering('words').children('span').lettering();
+    }
 
     // Set letter box width
     // TODO: Is it okay to re-calculate this on resize?
